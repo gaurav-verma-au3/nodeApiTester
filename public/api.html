@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid bg-dark py-2 px-5 d-flex ">
+      <h1 class="text-white">API</h1>
+      <a href="" id="homeUrl" class="ml-auto btn btn-primary px-4 py-3"
+        >HOME</a
+      >
+    </div>
+    <div class="container-fluid mt-5 ">
+      <div class="container">
+            <div class="mb-3">
+                    <div class="row">
+                      <div class="col-2 text-center d-flex align-items-center">
+                        <h5 class="my-auto mx-auto ">1</h5>
+                      </div>
+                      <div class="col-8 d-flex align-items-center   ">
+                        <h5 class="my-auto">http://localhost:3000/</h5>
+                        <input
+                          type="text"
+                
+                          class="form-control-sm border-1 "
+                          id="stateForAddition"
+                          placeholder="state"
+                        />
+                        <h5 class="my-auto">/add/</h5>
+                        <input
+                          type="text"
+                          class="form-control-sm   "
+                          id="cityForAddition"
+                          placeholder="city"
+                        />
+                      </div>
+                      <div class="col-2">
+                        <button
+                        onclick="addCity()"
+                        class="btn btn-primary ml-5 px-3 justify-content-end  "
+                        >
+                          Hit
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <hr></hr>
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col-2 text-center d-flex align-items-center">
+                        <h5 class="my-auto mx-auto ">2</h5>
+                      </div>
+                      <div class="col-8 d-flex align-items-center   ">
+                        <h5 class="my-auto">http://localhost:3000/</h5>
+                        <input
+                          type="text"
+                          class="form-control-sm   "
+                          id="stateForRemoval"
+                          placeholder="state"
+                        />
+                        <h5 class="my-auto">/remove/</h5>
+                        <input
+                          type="text"
+                          class="form-control-sm  "
+                          id="cityForRemoval"
+                          placeholder="city"
+                        />
+                      </div>
+                      <div class="col-2">
+                        <button
+                          onclick="removeCity()"
+                          class="btn btn-primary ml-5 px-3 justify-content-end "
+                        >
+                          Hit
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <hr></hr>
+                
+                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col-2 text-center d-flex align-items-center ">
+                        <h5 class="my-auto mx-auto ">3</h5>
+                      </div>
+                      <div class="col-8 d-flex align-items-center   ">
+                        <h5 class="my-auto">http://localhost:3000/showAllCities/</h5>
+                        <input
+                          type="text"
+                          class="form-control-sm   "
+                          id="initialLetter"
+                          placeholder="initialLetter"
+                        />
+                      </div>
+                      <div class="col-2">
+                        <button
+                          onclick="getMatchingCities()"
+                          class="btn btn-primary ml-5 px-3 justify-content-end "
+                        >
+                          Hit
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <hr></hr>
+                
+                  <div>
+                    <div class="row">
+                      <div class="col-2 text-center d-flex align-items-center ">
+                        <h5 class="my-auto mx-auto ">4</h5>
+                      </div>
+                      <div class="col-8 d-flex align-items-center  ">
+                        <h5 class="my-auto">http://localhost:3000/state/</h5>
+                        <input
+                          type="text"
+                          class="form-control-sm  "
+                          id="cityName"
+                          placeholder="cityName"
+                        />
+                      </div>
+                      <div class="col-2">
+                        <button onclick="getState()" class="btn btn-primary ml-5 px-3 ">
+                          Hit
+                        </button>
+                      </div>
+                    </div>
+                 </div>
+
+                 <pre class="mt-5" id="code"></pre>
+
+                 <!-- <textarea class="mt-5" id="code" cols="30" rows="10"></textarea> -->
+
+                </div>
+
+            </div>
+
+
+    <style>
+            #code {
+          width: 100%;
+          white-space: pre-wrap;
+          word-break: keep-all;
+          min-height: 25rem;
+          font-size: 0.8rem;
+          line-height: 1.2;
+          border-radius: 10px;
+          padding: 10px;
+        }
+            </style>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

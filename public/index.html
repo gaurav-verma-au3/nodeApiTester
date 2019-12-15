@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container-fluid bg-dark py-2 px-5 d-flex ">
+      <h1 class="text-white">Find Frequent State</h1>
+      <a id="apiUrl" href="" class="ml-auto btn btn-primary px-4 py-3">API</a>
+    </div>
+    <div class="container-fluid mt-5">
+      <div class="container">
+        <div>
+          <div class="form-row">
+            <div class="col">
+              <label for="city 1">City 1</label>
+              <input type="text" class="form-control" id="city1" />
+            </div>
+            <div class="col">
+              <label for="city 2">City 2</label>
+              <input type="text" class="form-control" id="city2" />
+            </div>
+            <div class="col">
+              <label for="city 3">City 3</label>
+              <input type="text" class="form-control" id="city3" />
+            </div>
+            <div class="col">
+              <label for="city 4">City 4</label>
+              <input type="text" class="form-control" id="city4" />
+            </div>
+            <div class="col">
+              <label for="city 5">City 5</label>
+              <input type="text" class="form-control" id="city5" />
+            </div>
+          </div>
+          <div class="row d-flex justify-content-end ">
+            <button onclick="getFrequent()" class="btn btn-primary mt-5 mr-3 ">
+              Submit
+            </button>
+          </div>
+        </div>
+        <div class="alert alert-success mt-5" role="alert">
+          <h5 id="frequent-box" class="text-center py-5"></h5>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
