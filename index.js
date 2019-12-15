@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
-const MONGO_STRING = require("./config");
+require("dotenv").config();
+//const MONGO_STRING = require("./config");
 //Static Asset Declaration
 app.use(express.static(__dirname + "/public"));
 
 //Database
 let MongoClient = require("mongodb").MongoClient;
-let url = MONGO_STRING.MONGO_STRING || process.env.MONGO_STRING;
+let url = process.env.MONGO_STRING;
 const DbName = "states";
 
 app.locals.db;
