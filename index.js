@@ -6,7 +6,7 @@ app.use(express.static(__dirname + "/public"));
 
 //Database
 let MongoClient = require("mongodb").MongoClient;
-let url = MONGO_STRING.MONGO_STRING;
+let url = MONGO_STRING.MONGO_STRING || process.env.MONGO_STRING;
 const DbName = "states";
 
 app.locals.db;
